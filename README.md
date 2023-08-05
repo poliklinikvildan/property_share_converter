@@ -14,7 +14,11 @@ Property Deed Share Converter
 - [License](#license)
 - [Support and Contact](#support-and-contact)
 
-![deed share converter](https://github.com/poliklinikvildan/property_share_converter/assets/134360221/64b47d26-d743-48f1-8ab7-cd1f86ca36b1)
+<div style="border: 1px solid #ccc; padding: 10px; display: flex; justify-content: center;">
+  <a href="https://user-images.githubusercontent.com/134360221/258585247-64b47d26-d743-48f1-8ab7-cd1f86ca36b1" target="_blank">
+    <img src="https://user-images.githubusercontent.com/134360221/258585247-64b47d26-d743-48f1-8ab7-cd1f86ca36b1" alt="Image" style="width: 30%;">
+  </a>
+</div>
 
 ## Overview
 
