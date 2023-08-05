@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ratio and Numeric Conversion</title>
+</head>
+<body>
+<h1>SHARE CONVERTER</h1>  
+  <table>
+    <tr>
+      <th>Names</th>
+      <th>Share as Ratio (A:B)</th>
+      <th>Share as Ratio (Numeric)</th>
+    </tr>
+    <tr>
+      <td>a1</td>
+      <td><input type="text" id="a1-ratio" onchange="convertToNumeric('a1-ratio', 'a1-numeric')" /></td>
+      <td><input type="text" id="a1-numeric" onchange="convertToRatio('a1-numeric', 'a1-ratio')" /></td>
+    </tr>
+    <tr>
+      <td>b1</td>
+      <td><input type="text" id="b1-ratio" onchange="convertToNumeric('b1-ratio', 'b1-numeric')" /></td>
+      <td><input type="text" id="b1-numeric" onchange="convertToRatio('b1-numeric', 'b1-ratio')" /></td>
+    </tr>
+    <tr>
+      <td>c1</td>
+      <td><input type="text" id="c1-ratio" onchange="convertToNumeric('c1-ratio', 'c1-numeric')" /></td>
+      <td><input type="text" id="c1-numeric" onchange="convertToRatio('c1-numeric', 'c1-ratio')" /></td>
+    </tr>
+    <tr>
+      <td>a1</td>
+      <td><input type="text" id="a1-ratio" onchange="convertToNumeric('a1-ratio', 'a1-numeric')" /></td>
+      <td><input type="text" id="a1-numeric" onchange="convertToRatio('a1-numeric', 'a1-ratio')" /></td>
+    </tr>
+    <tr>
+      <td>b1</td>
+      <td><input type="text" id="b1-ratio" onchange="convertToNumeric('b1-ratio', 'b1-numeric')" /></td>
+      <td><input type="text" id="b1-numeric" onchange="convertToRatio('b1-numeric', 'b1-ratio')" /></td>
+    </tr>
+    <tr>
+      <td>c1</td>
+      <td><input type="text" id="c1-ratio" onchange="convertToNumeric('c1-ratio', 'c1-numeric')" /></td>
+      <td><input type="text" id="c1-numeric" onchange="convertToRatio('c1-numeric', 'c1-ratio')" /></td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </table>
+
+  <script>
+    function convertToNumeric(ratioId, numericId) {
+      var ratioInput = document.getElementById(ratioId).value;
+      var numericInput = "";
+
+      // Convert ratio to numeric (percentage) value
+      var ratioParts = ratioInput.split("/");
+      if (ratioParts.length === 2) {
+        var numerator = parseFloat(ratioParts[0]);
+        var denominator = parseFloat(ratioParts[1]);
+        if (!isNaN(numerator) && !isNaN(denominator) && denominator !== 0) {
+          var ratioValue = (numerator / denominator) * 100;
+          numericInput = ratioValue.toFixed(2) + "%";
+        }
+      }
+
+      document.getElementById(numericId).value = numericInput;
+    }
+
+    function convertToRatio(numericId, ratioId) {
+      var numericInput = document.getElementById(numericId).value;
+      var ratioInput = "";
+
+      // Convert numeric (percentage) value to ratio
+      var numericValue = parseFloat(numericInput);
+      if (!isNaN(numericValue)) {
+        var ratioValue = numericValue / 100;
+        ratioInput = ratioValue.toFixed(2) + ":1";
+      }
+
+      document.getElementById(ratioId).value = ratioInput;
+    }
+  </script>
+</body>
+</html>
