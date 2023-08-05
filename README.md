@@ -14,6 +14,8 @@ Property Deed Share Converter
 - [License](#license)
 - [Support and Contact](#support-and-contact)
 
+![deed share converter](https://github.com/poliklinikvildan/property_share_converter/assets/134360221/64b47d26-d743-48f1-8ab7-cd1f86ca36b1)
+
 ## Overview
 
 The Share Converter app is a single HTML file application that simplifies the reading and understanding of shares on property deeds. It is specifically designed to handle cases involving multiple individuals or entities sharing ownership of the same deed. The app provides a user-friendly interface for converting share values between two common formats: ratio (A:B) and numeric (percentage).
